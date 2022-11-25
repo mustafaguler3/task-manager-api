@@ -18,6 +18,9 @@ app.get("/hello",(req,res)=>{
 
 app.use("/api/v1/tasks",tasks);
 
+
+const PORT = process.env.PORT || 3000
+
 const start = async () => {
     try {
         await connectDb(process.env.MONGO_URI)
